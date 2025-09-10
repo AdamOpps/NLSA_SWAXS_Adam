@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+
+double squaredEuclideanDistance(double* point1, double* point2, int D) {
+    double distance = 0.0;
+    for (int i = 0; i < D; i++) {
+        double diff = point1[i] - point2[i];
+        distance += diff * diff;
+    }
+    return distance;
+}
+
+int main() {
+    // Define ranges and steps
+    int min_N = 1000;
+    int max_N = 10000;
+    int step_N = 1000;
+
+    int min_D = 1000;
+    int max_D = 10000;
+    int step_D = 1000;
+
+    // Iterate over different values of N
+    for (int N = min_N; N <= max_N; N += step_N) {
+        // Iterate over different values of D
+        for (int D = min_D; D <= max_D; D += step_D) {
+            // Allocate memory for the 'xyz' array and fill it with random values
+            double** xyz = (double**)malloc(N * sizeof(double*));
+            for (int i = 0; i < N; i++) {
+                xyz[i] = (double*)malloc(D * sizeof(double));
+                for (int j = 0; j < D; j++) {
+                    xyz[i][j] = (double)rand() / RAND_MAX;
+                }
+            }
+
+            // Allocate memory for the squared Euclidean distances
+            double** sqDist = (double**)malloc(N * sizeof(double*));
+            for (int i = 0; i < N; i++) {
+                sqDist[i] = (double*)malloc(N * sizeof(double));
+            }
+
+            // Start measuring runtime
+            clock_t start_time = clock();
+
+            // Calculate squared Euclidean distances and store the result
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < N; j++) {
+                    sqDist[i][j] = squaredEuclideanDistance(xyz[i], xyz[j], D);
+                }
+            }
+
+            // Stop measuring runtime
+            clock_t end_time = clock();
+
+            // Print runtime and dimensions
+            printf("N=%d, D=%d, Runtime: %f seconds\n", N, D, (double)(end_time - start_time) / CLOCKS_PER_SEC);
+
+            // Free allocated memory
+            for (int i = 0; i < N; i++) {
+                free(xyz[i]);
+                free(sqDist[i]);
+            }
+            free(xyz);
+            free(sqDist);
+        }
+    }
+
+    return 0;
+}
