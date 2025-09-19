@@ -116,7 +116,7 @@ conda create --name <my-env> --python=<version>
 # Running NLSA from GUI
 To run the NLSA code with SWAXS data using the graphical user interface (described in Sec. 0.3 of the main article), the following steps are required:
 
-1. Navigate to the ```/gui``` directory and run the Python code ```gui_nlsa.py```. This will launch the graphical interface (shown in Fig.7 from the article) where the main window includes functions for parameter search, diffusion map embedding, and NLSA.
+1. Navigate to the ```./gui``` directory and run the Python code ```gui_nlsa.py```. This will launch the graphical interface (shown in Fig.7 from the article) where the main window includes functions for parameter search, diffusion map embedding, and NLSA.
    
 2. In the “Settings” box, click the “Select Data File” button to browse and load the dataset for the analysis. The dataset must be in ```*.h5``` format.
 
@@ -140,7 +140,7 @@ sigma factors ($σ_f$), and the number of diffusion map eigenvalues and eigenfun
 10. In this new tab, the user can choose the desired chronos (modes) for the NLSA reconstruction. Selected chronos are outlined in red. Further, the indices of selected chronos are listed in the main tab.
        - The leading modes corresponding to the largest singular values are  usually selected, or if they align with prior knowledge of the dynamical system being studied.
 
-11. Return to the main tab. Press the “Run NLSA Reconstruction” button to perform the final NLSA reconstruction using the selected modes. The code will extract the reconstruction by the specified mode from X_recon (produced in step 1) and write the unwrapped results into a new file with the name format ```data_reconst_N{N}_nN{nN}_c{C}_sigma{sigma}_modes{m1, m2,...}.h5``` in the ```/gui``` directory. Here, m1, m2, ... stand for the selected modes for the NLSA reconstruction. 
+11. Return to the main tab. Press the “Run NLSA Reconstruction” button to perform the final NLSA reconstruction using the selected modes. The code will extract the reconstruction by the specified mode from X_recon (produced in step 1) and write the unwrapped results into a new file with the name format ```data_reconst_N{N}_nN{nN}_c{C}_sigma{sigma}_modes{m1, m2,...}.h5``` in the ```./gui``` directory. Here, m1, m2, ... stand for the selected modes for the NLSA reconstruction. 
     - Note that, except for the final reconstructed data, all files and figures created by this GUI are moved to a folder generated at the start of the runtime within the GUI’s working directory. The naming convention of this folder is ```/temp_data_{YYYYMMDD_HHmmSS}```, where the bracketed string is a timestamp.
 
 # More Details
