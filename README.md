@@ -144,4 +144,4 @@ sigma factors ($σ_f$), and the number of diffusion map eigenvalues and eigenfun
     - Note that, except for the final reconstructed data, all files and figures created by this GUI are moved to a folder generated at the start of the runtime within the GUI’s working directory. The naming convention of this folder is ```/temp_data_{YYYYMMDD_HHmmSS}```, where the bracketed string is a timestamp.
 
 # More Details
-See the documentation file in "./doc/" folder for more implementation details.
+See the documentation file in the ./doc folder for more implementation details.
