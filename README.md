@@ -2,7 +2,7 @@
 
 Table of Contents
 - [Overview](#overview)
-- [Requirements](# Requirements)
+- [Requirements](#Requirements)
 - [Python Environment Setup](#python-environment-setup)
 - [Running NLSA from GUI](#running-nlsa-from-gui)
 - [More Details](#more-details)
