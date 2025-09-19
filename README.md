@@ -2,6 +2,7 @@
 
 Table of Contents
 - [Overview](#overview)
+- [Requirements](# Requirements)
 - [Python Environment Setup](#python-environment-setup)
 - [Running NLSA from GUI](#running-nlsa-from-gui)
 - [More Details](#more-details)
@@ -19,6 +20,12 @@ NLSA_SWAXS is a collection of scripts and associated data files related to Nonli
 - Allows viewing of DM eigenfunctions, NLSA chronos, and singular values
 - Reconstructs data from selected NLSA modes and saves it to disk.
 
+# Requirements
+
+- Python (recommended: latest version)
+- Jupyter Notebook
+- Additional dependencies may be required based on the scripts (see notebook headers for details)
+Usage
 
 # Python Environment Setup
 <!-- ## Linux Setup
@@ -137,4 +144,4 @@ sigma factors ($σ_f$), and the number of diffusion map eigenvalues and eigenfun
     - Note that, except for the final reconstructed data, all files and figures created by this GUI are moved to a folder generated at the start of the runtime within the GUI’s working directory. The naming convention of this folder is ```/temp_data_{YYYYMMDD_HHmmSS}```, where the bracketed string is a timestamp.
 
 # More Details
-See the documentation file "/doc/" for more implementation details.
+See the documentation file "./doc/" for more implementation details.
