@@ -146,3 +146,6 @@ sigma factors ($σ_f$), and the number of diffusion map eigenvalues and eigenfun
 
 # More Details
 See the documentation file in the ./doc folder for more implementation details.
+
+Demo data included is simulated Calmodulin (1CFD to 2BBM) time series data, including clean and noisy versions of both the "measured" intensity, and the difference profiles. 
+<!-- CaM: 1E5 photons per pulse, 1kHz rep rate, 10 sec exposure per frame, NO jitter or pulse broadening, replicate 3 (of 5) -->
