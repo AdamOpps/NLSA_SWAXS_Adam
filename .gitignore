@@ -1,0 +1,4 @@
+__pycache__
+.pyc
+gui/temp_data*
+testing.py

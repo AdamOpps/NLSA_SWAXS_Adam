@@ -2,7 +2,7 @@
 
 Table of Contents
 - [Overview](#overview)
-- [Requirements](#Requirements)
+- [Requirements](#requirements)
 - [Python Environment Setup](#python-environment-setup)
 - [Running NLSA from GUI](#running-nlsa-from-gui)
 - [More Details](#more-details)
@@ -110,6 +110,7 @@ conda create --name <my-env> --python=<version>
    - MPI: mpi4py, mpich (from conda-forge)
 3. Clone this Github repository.
 4. Create a new environment path variable called ```CXFEL_ROOT``` directing to the root of the cloned repo. Ex. ```~/.../NLSA_GUI```
+   - This is required for our implementation of MPI multithreading to have a known, central script directory. Future updates may remove this requirement.
 5. **Optional:** If performing *remote computing*, to a cluster or otherwise, Set up X11 forwarding.
 
 
